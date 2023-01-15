@@ -6,6 +6,10 @@ References
 <https://stackoverflow.com/questions/600079/how-do-i-clone-a-subdirectory-only-of-a-git-repository/73587479#73587479>
 
 ```sh
+#Configure install nvm node typescript
+https://github.com/nvm-sh/nvm
+
+#Configure ssh in github
 mkdir <repo>
 cd <repo>
 git init
