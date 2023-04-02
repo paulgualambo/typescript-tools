@@ -1,0 +1,39 @@
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { <name>DTO } from './<name>.dto';
+
+@Controller('<name>s')
+export class <name>sController {
+
+    <name>s: <name>DTO[] = [];
+
+    @Get()
+    getAll<name>s(): <name>DTO[] {
+        return this.<name>s;
+    }
+
+    @Get(':id')
+    get<name>ById(@Param('id') id: string): <name>DTO {
+        const <name> = this.<name>s.find(<name> => <name>.id == id);
+        return <name>;
+    }
+
+    @Post()
+    new<name>(@Body() <name>: <name>DTO): <name>DTO {
+        const new<name> = { ...<name>, id: '' + (this.<name>s.length) }
+        this.<name>s = [...this.<name>s, new<name>];
+        return new<name>;
+    }
+
+    @Put(':id')
+    update<name>(@Param('id') id: string, @Body() <name>: <name>DTO): <name>DTO {
+        this.<name>s = this.<name>s.filter(<name> => <name>.id !== id);
+        this.<name>s = [...this.<name>s, this.new<name>(<name>)];
+        return <name>;
+    }
+
+    @Delete(':id')
+    delete<name>(@Param('id') id: string) {
+        this.<name>s = this.<name>s.filter(<name> => <name>.id !== id);
+    }
+
+}
