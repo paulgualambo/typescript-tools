@@ -5,9 +5,8 @@
       "type": "node",
       "request": "launch",
       "name": "Debug TypeScript in Node.js",
-      //"preLaunchTask": "npm: build",
+      //"preLaunchTask": "tsc: build - ${workspaceFolder}/app/tsconfig.json",
       "program": "${workspaceFolder}/app/src/index.ts",
-      "protocol": "inspector",
       "outFiles": [
         "${workspaceFolder}/app/src/build/**/*.js"
       ],
