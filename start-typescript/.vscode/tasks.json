@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { // For build
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": "build",
+      "label": "tsc: build - tsconfig.json"
+    },
+    { // For watch
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "option": "watch",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "group": "build",
+      "label": "tsc: watch - tsconfig.json"
+    },
+    { // If both of the above don't work you could create an npm script and run it via this task
+      "type": "npm",
+      "script": "build", // This should be the name of your script
+      "problemMatcher": [],
+      "label": "npm: build typescript"
+    }
+  ]
+}
