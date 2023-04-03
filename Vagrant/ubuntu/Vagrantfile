@@ -1,0 +1,38 @@
+##
+#Paul Gualambo
+##
+
+#Parameters for the Vagrantfile
+name_so = "ubuntu"
+box_so = "alvistack/devel-22.04"
+vm_hostname = "TypescriptTool"
+vm_name_virtual_box="TypescriptTool"
+bridged_network = "Intel(R) I211 Gigabit Network Connection" #Es el nombre de su red
+#Get-NetIPAddress | Where-Object {$_.AddressFamily -eq "IPv4" -and $_.PrefixOrigin -eq "Dhcp" -and $_.IPAddress -notlike "169.*"} | Select-Object -ExpandProperty IPAddress
+ip_address_assigned = "192.168.18.51"
+
+#Utilizando virtualbox
+#ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
+
+Vagrant.configure("2") do |config|  
+    config.vm.hostname = "#{vm_hostname}"
+    config.vm.box = "#{box_so}"
+    config.vm.network "public_network", bridge: "#{bridged_network}", ip: "#{ip_address_assigned}"
+    #config.vm.network "public_network", bridge: "#{bridged_network_2}"
+
+    config.vm.box_check_update = true
+
+    #config.vm.synced_folder "../scripts", "/scripts_init_helper"
+    config.vm.synced_folder "../../", "/project/"
+
+    #Virtualbox
+    config.vm.provider "virtualbox" do |v|
+      v.name = "#{vm_name_virtual_box}"
+      #v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+      v.memory = 1024
+      v.cpus = 1
+      # Enable promiscuous mode so the server can receive traffic
+      # for the virtual machines and containers.      
+      v.customize ["modifyvm", :id, "--nicpromisc2", "allow-vms"]
+    end
+end
