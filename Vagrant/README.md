@@ -5,8 +5,8 @@
 En el vagrant file configurar su maquina virtual con las siguientes lineas:
 name_so = "amazonlinux2"
 so = "gbailey/amzn2"
-vm_name = "pagoefectivo-admin-web"
-vm_hostname = "pagoefectivo-web-pagestatus"
+vm_name = ""
+vm_hostname = ""
 bridged_network = "COLOCAR SU ADAPTADOR DE RED" #en power shell "ipconfig /all"
 ip_address_assigned = "COLOCAR EL IP POR EL CUAL DESEA CONECTARSE"
 
@@ -17,9 +17,14 @@ $ vagrant ssh
 2.- Instalación base
 
 --Software Base
+
+```sh
 sudo apt update
 sudo apt upgrade -y
 sudo apt install curl -y
 sudo apt install git -y
+```
 
 --Software NVM
+
+--Instalación de typescript
