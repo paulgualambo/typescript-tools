@@ -4,7 +4,7 @@
 
 #Parameters for the Vagrantfile
 name_so = "ubuntu"
-box_so = "alvistack/devel-22.04"
+box_so = "bento/ubuntu-22.04"
 vm_hostname = "TypescriptTool"
 vm_name_virtual_box="TypescriptTool"
 bridged_network = "Intel(R) I211 Gigabit Network Connection" #Es el nombre de su red
@@ -21,9 +21,6 @@ Vagrant.configure("2") do |config|
     #config.vm.network "public_network", bridge: "#{bridged_network_2}"
 
     config.vm.box_check_update = true
-
-    #config.vm.synced_folder "../scripts", "/scripts_init_helper"
-    config.vm.synced_folder "../../", "/project/"
 
     #Virtualbox
     config.vm.provider "virtualbox" do |v|

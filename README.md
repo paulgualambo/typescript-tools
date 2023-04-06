@@ -22,3 +22,7 @@ echo "another/sub/tree" >> .git/info/sparse-checkout
 
 git pull origin <branch>
 ```
+testing
+
+npm install -D jest typescript ts-jest @types/jest ts-node
+npm ts-jest config:init
