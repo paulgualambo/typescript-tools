@@ -5,7 +5,6 @@
       "type": "node",
       "request": "launch",
       "name": "Debug TypeScript in Node.js",
-      //"preLaunchTask": "tsc: build - ${workspaceFolder}/app/tsconfig.json",
       "program": "${workspaceFolder}/app/src/index.ts",
       "outFiles": [
         "${workspaceFolder}/app/src/build/**/*.js"
@@ -13,6 +12,17 @@
       "sourceMaps": true,
       "smartStep": true,
       "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "Docker Node.js Launch",
+      "type": "docker",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "platform": "node",
+      "node": {
+        "package": "${workspaceFolder}/app/package.json",
+        "localRoot": "${workspaceFolder}/app"
+      }
     }
   ]
 }

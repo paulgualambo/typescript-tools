@@ -1,7 +1,7 @@
 {
   "version": "2.0.0",
   "tasks": [
-    { // For build
+    {
       "type": "typescript",
       "tsconfig": "tsconfig.json",
       "problemMatcher": [
@@ -10,7 +10,7 @@
       "group": "build",
       "label": "tsc: build - tsconfig.json"
     },
-    { // For watch
+    {
       "type": "typescript",
       "tsconfig": "tsconfig.json",
       "option": "watch",
@@ -20,11 +20,52 @@
       "group": "build",
       "label": "tsc: watch - tsconfig.json"
     },
-    { // If both of the above don't work you could create an npm script and run it via this task
+    {
       "type": "npm",
-      "script": "build", // This should be the name of your script
+      "script": "build",
       "problemMatcher": [],
       "label": "npm: build typescript"
+    },
+    {
+      "type": "docker-build",
+      "label": "docker-build",
+      "platform": "node",
+      "dockerBuild": {
+        "dockerfile": "${workspaceFolder}/app/Dockerfile",
+        "context": "${workspaceFolder}/app",
+        "pull": true
+      },
+      "node": {
+        "package": "${workspaceFolder}/app/package.json"
+      }
+    },
+    {
+      "type": "docker-run",
+      "label": "docker-run: release",
+      "dependsOn": [
+        "docker-build"
+      ],
+      "platform": "node",
+      "node": {
+        "package": "${workspaceFolder}/app/package.json"
+      }
+    },
+    {
+      "type": "docker-run",
+      "label": "docker-run: debug",
+      "dependsOn": [
+        "docker-build"
+      ],
+      "dockerRun": {
+        "env": {
+          "DEBUG": "*",
+          "NODE_ENV": "development"
+        }
+      },
+      "node": {
+        "package": "${workspaceFolder}/app/package.json",
+        "enableDebugging": true
+      }
     }
   ]
 }
