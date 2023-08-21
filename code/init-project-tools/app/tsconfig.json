@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "es2022",
+      "module": "commonjs",
+      "lib": ["es6"],
+      "allowJs": true,
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "strict": true,
+      "esModuleInterop": true,
+      "types": ["node", "jest"],
+      "skipLibCheck": true
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "tests/**/*.ts"
+    ]
+  }
+  

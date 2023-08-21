@@ -1,0 +1,4 @@
+{
+    "jest.rootPath": "app/tests",
+    "jest.jestCommandLine": "jest --watch"
+}

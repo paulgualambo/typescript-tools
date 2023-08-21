@@ -7,4 +7,4 @@ COPY . .
 EXPOSE 3000
 RUN chown -R node /usr/src/app
 USER node
-CMD ["npm", "start"]
+CMD ["node", "--inspect=0.0.0.0:9229", "src/index.js"]

@@ -1,2 +1,5 @@
 // eslint-disable-next-line no-console
-console.log('Hello world!');
+let i = 1;
+i++;
+
+console.log(i);

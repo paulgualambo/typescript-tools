@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "runtimeVersion": "18",
+            "name": "vscode-jest-tests.v2",
+            "request": "launch",
+            "program": "${workspaceFolder}/app/node_modules/.bin/jest",
+            "args": [
+                "--runInBand",
+                "--watchAll=false",
+                "--testNamePattern",
+                "${jest.testNamePattern}",
+                "--runTestsByPath",
+                "${jest.testFile}"
+            ],
+            "cwd": "${workspaceFolder}/app",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "windows": {
+                "program": "${workspaceFolder}/app/node_modules/jest/bin/jest"
+            }
+        },
+        {
+            "name": "Docker Node.js Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "platform": "node",
+            "node": {
+                "package": "${workspaceFolder}/app/package.json",
+                "localRoot": "${workspaceFolder}/app"
+            }
+        }
+    ]
+}
