@@ -1,6 +1,8 @@
 # init-project-tools
 
-## getstart
+Este proyecto es una plantilla de inicio para un proyecto con Typescript
+
+## Instalación
 
 ```sh
 git init
@@ -13,6 +15,7 @@ echo "start-typescript" >> .git/info/sparse-checkout
 ```
 
 ### Install libraries
+
 ```sh
 # Install nvm
 #https://github.com/nvm-sh/nvm
@@ -74,17 +77,16 @@ tsc --init
 # "outDir": "./dist",
 # strict mode true
 ```
-###
 
-### Features
+### Setup VSCODE
 
-- Minimal
-- TypeScript v4
-- Testing with Jest
-- Linting with Eslint and Prettier
-- Pre-commit hooks with Husky
-- VS Code debugger scripts
-- Local development with Nodemon
+Linter
+EditorConfig
+Prettier
+Debug
+Debug Docker
+Jest
+Jest Docker
 
 ### Scripts
 
@@ -115,3 +117,15 @@ Format your code.
 #### `npm run prettier-watch`
 
 Format your code in watch mode, waiting for file changes.
+
+## Referencias
+
+### Setup virtual machine
+
+[Vagrant]<https://github.com/paulgualambo/env-tools/tree/main/vagrant/getstart>
+
+[Vscode]
+
+[README.md]
+
+[CHANGELOG.md]
