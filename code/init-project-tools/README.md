@@ -47,7 +47,7 @@ npm init -y
 
 # Install typescript
 # Install TS globally on my machine
-npm i -D typescript@latest
+npm i -D -g typescript@latest
 npm i -D @types/node ts-node@latest
 # Check version
 tsc -v
@@ -81,11 +81,19 @@ tsc --init
 ### Setup VSCODE
 
 Linter
+
 EditorConfig
+
 Prettier
+
 Debug
+
+- [vscode](https://code.visualstudio.com/docs/typescript/typescript-debugging)
+
 Debug Docker
+
 Jest
+
 Jest Docker
 
 ### Scripts
@@ -122,7 +130,7 @@ Format your code in watch mode, waiting for file changes.
 
 ### Setup virtual machine
 
-[Vagrant]<https://github.com/paulgualambo/env-tools/tree/main/vagrant/getstart>
+[Vagrant](https://github.com/paulgualambo/env-tools/tree/main/vagrant/getstart)
 
 [Vscode]
 
