@@ -1,0 +1,51 @@
+{
+  // Configuraciones de VSCode
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "debug:local",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      //"program": "${workspaceFolder}/app/src/index.ts",  // Ajusta la ruta de entrada
+      "program": "${workspaceFolder}/app/debug/local.ts",  // Ajusta la ruta de entrada
+      "preLaunchTask": "tsc: debug build",
+      "outFiles": [
+        "${workspaceFolder}/app/dist/**/*.js"  // Ajusta según tu outDir en tsconfig
+      ],
+      "sourceMaps": true
+    }
+    ,
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Jest Tests (app)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "test:debug"
+      ],
+      "cwd": "${workspaceFolder}/app",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Docker (TS)",
+      "address": "localhost",
+      "port": 9229,
+      //"protocol": "inspector",
+      // Dónde vive tu código local vs contenedor
+      "localRoot": "${workspaceFolder}/app",
+      "remoteRoot": "/usr/src/app",
+      // Puedes omitir outFiles si usas ts-node, 
+      // pero si quieres mapear source maps, configúralo:
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}

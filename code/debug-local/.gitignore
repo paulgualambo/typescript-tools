@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias instaladas
+node_modules/
+
+# Salida de compilación (si usas tsc o algún bundler)
+dist/
+build/
+out/
+
+# Archivos de coverage (pruebas)
+coverage/
+
+# Configuraciones de producción o entornos
+.env
+.env.*.local
+
+# Archivos temporales de editores/IDE
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.temp
+
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# Tipos generados por el compilador (opcional)
+*.d.ts
+
+# Paquetes lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+#custom
+#debug
