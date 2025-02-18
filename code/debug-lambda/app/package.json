@@ -1,0 +1,33 @@
+{
+  "name": "my-lambda-project",
+  "version": "1.0.0",
+  "description": "Example AWS Lambda project in TypeScript with Inversify, a logger middleware, and an array attribute in the event.",
+  "main": "dist/handlers/myHandler.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "debug": "nodemon --watch 'src/**/*.ts' --exec 'node --inspect=0.0.0.0:9229 -r ts-node/register' debug/index.ts",
+    "test": "jest",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.10",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5",
+    "@types/aws-lambda": "^8.10.119",
+    "inversify": "^6.0.1",
+    "serverless": "^3.32.2",
+    "serverless-offline": "^12.0.4"
+  },
+  "dependencies": {
+    "@middy/core": "^4.0.0",
+    "@middy/util": "^4.0.0"
+  }
+}

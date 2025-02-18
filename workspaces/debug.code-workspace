@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../../../ms-vms-configure-admin"
+		},
+		{
+			"path": "../code/debug-lambda"
 		}
 	],
 	"settings": {}
