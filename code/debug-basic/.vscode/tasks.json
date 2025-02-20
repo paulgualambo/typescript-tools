@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "tsc: debug build",
+        "type": "shell",
+        "command": "${workspaceFolder}/app/node_modules/.bin/tsc",
+        "args": [
+          "-p",
+          "app/execute/tsconfig.json"  // Ruta relativa al workspace root
+        ],
+        "problemMatcher": ["$tsc"],
+        "group": "build",
+        "options": {
+          "cwd": "${workspaceFolder}"  // Fuerza el directorio de trabajo raíz
+        }
+      }
+    ]
+  }
+  

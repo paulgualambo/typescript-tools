@@ -1,0 +1,24 @@
+{
+    "validate1": {
+        "nombre": "Juan",
+        "apellidos": "Perez",
+        "fechaNacimiento": "1984-02-08",
+        "activo": true,
+        "pais": "Mexico",
+        "correo": "juan.perez@example.com",
+        "telefono": "123456789",
+        "hobbies": [
+            "lectura"
+        ],
+        "skills": [
+            {
+                "nombre": "TypeScript",
+                "descripcion": "Avanzado"
+            },
+            {
+                "nombre": "JavaScript"
+            }
+        ],
+        "experienciaAnios": 5
+    }
+}

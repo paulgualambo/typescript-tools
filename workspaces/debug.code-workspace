@@ -1,13 +1,16 @@
 {
 	"folders": [
 		{
-			"path": "../code/debug-local"
-		},
-		{
 			"path": "../../../ms-vms-configure-admin"
 		},
 		{
 			"path": "../code/debug-lambda"
+		},
+		{
+			"path": "../code/debug-basic"
+		},
+		{
+			"path": "../code/init-project-tools"
 		}
 	],
 	"settings": {}

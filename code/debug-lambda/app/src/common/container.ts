@@ -2,7 +2,7 @@ import "reflect-metadata";
 import { Container } from "inversify";
 import { TYPES } from "./types";
 import { DomainService } from "../services/domain.service";
-import { BaseHandler } from "../handlers/myHandler";
+import { BaseHandler } from "../handlers/myHandler/myHandler";
 
 
 

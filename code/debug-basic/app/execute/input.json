@@ -1,0 +1,113 @@
+{
+    "Request": {
+        "validate1": {
+            "nombre": "Carlos",
+            "apellidos": "Rodriguez",
+            "fechaNacimiento": "1992-04-15",
+            "pais": "Mexico",
+            "correo": "carlos.rodriguez@example.com",
+            "telefono": "5551234567",
+            "hobbies": [
+                "futbol",
+                "videojuegos"
+            ],
+            "skills": [
+                {
+                    "nombre": "Desarrollo Web",
+                    "descripcion": "Experto en HTML, CSS y JavaScript"
+                },
+                {
+                    "nombre": "Bases de Datos",
+                    "descripcion": "Manejo de MySQL y PostgreSQL"
+                }
+            ],
+            "experienciaAnios": 5,
+            "activo": true
+        },
+        "validate2": {
+            "nombre": "Lucia",
+            "apellidos": "Sanchez",
+            "fechaNacimiento": "1988-11-02",
+            "pais": "Colombia",
+            "correo": "lucia.sanchez@example.com",
+            "telefono": "300400500",
+            "hobbies": [
+                "lectura",
+                "senderismo",
+                "cine"
+            ],
+            "skills": [
+                {
+                    "nombre": "Marketing Digital",
+                    "descripcion": "Especialista en redes sociales y analitica"
+                }
+            ],
+            "experienciaAnios": 8,
+            "activo": false
+        },
+        "error_skills_no_validate": {
+            "nombre": "Juan",
+            "apellidos": "Garcia",
+            "fechaNacimiento": "1990-09-10",
+            "pais": "Argentina",
+            "correo": "juan.garcia@example.com",
+            "telefono": "789456123",
+            "hobbies": [
+                "ajedrez",
+                "pintura"
+            ],
+            "skills": "Desarrollo Web",
+            "experienciaAnios": 3,
+            "activo": true
+        },
+        "error_fechaNacimiento_missing": {
+            "nombre": "Mariana",
+            "apellidos": "Torres",
+            "pais": "Peru",
+            "correo": "mariana.torres@example.com",
+            "telefono": "111222333",
+            "hobbies": [
+                "cocina"
+            ],
+            "skills": [
+                {
+                    "nombre": "Diseño Grafico",
+                    "descripcion": "Uso profesional de Photoshop e Illustrator"
+                }
+            ],
+            "experienciaAnios": 2,
+            "activo": true
+        },
+        "error_format_fechaNacimiento_pais": {
+            "nombre": "Pedro",
+            "apellidos": "Lopez",
+            "fechaNacimiento": 19950812,
+            "pais": 123,
+            "correo": "pedro.lopezexample.com",
+            "telefono": true,
+            "hobbies": "cantar",
+            "skills": [
+                {
+                    "nombre": 789,
+                    "descripcion": [
+                        "Manejo de Excel"
+                    ]
+                }
+            ],
+            "experienciaAnios": "cinco",
+            "activo": "si"
+        },
+        "error_array_empty_fields_no_validate": {
+            "nombre": "Ana",
+            "apellidos": "Diaz",
+            "fechaNacimiento": "1975-05-20",
+            "pais": "Chile",
+            "correo": "ana.diaz@example.com",
+            "telefonos": "99887766",
+            "hobbies": [],
+            "skills": [],
+            "experienciaAnios": 7,
+            "activo": true
+        }
+    }
+}

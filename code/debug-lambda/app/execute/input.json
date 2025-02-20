@@ -1,0 +1,16 @@
+{
+    "validate": {
+        "headers": {
+            "Content-Type": "application/json"
+        }
+        
+
+    },
+    "sanitize": {
+        "name": "trim",
+        "email": "trim|lowercase",
+        "age": "toInt",
+        "password": "trim",
+        "confirmPassword": "trim"
+    }
+}

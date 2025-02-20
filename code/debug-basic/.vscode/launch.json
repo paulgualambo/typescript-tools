@@ -9,9 +9,10 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      //"program": "${workspaceFolder}/app/src/index.ts",  // Ajusta la ruta de entrada
-      "program": "${workspaceFolder}/app/debug/local.ts",  // Ajusta la ruta de entrada
+      "program": "${workspaceFolder}/app/execute/local.ts",  // Ajusta la ruta de entrada
       "preLaunchTask": "tsc: debug build",
+      // Carga variables de entorno desde un archivo .env en una ruta específica
+      "envFile": "${workspaceFolder}/app/.env", // Ejemplo: "config/.env"      
       "outFiles": [
         "${workspaceFolder}/app/dist/**/*.js"  // Ajusta según tu outDir en tsconfig
       ],
@@ -24,10 +25,10 @@
       "name": "Attach to Docker (TS)",
       "address": "localhost",
       "port": 9229,
-      //"protocol": "inspector",
       // Dónde vive tu código local vs contenedor
       "localRoot": "${workspaceFolder}/app",
       "remoteRoot": "/usr/src/app",
+      "restart": true,      
       // Puedes omitir outFiles si usas ts-node, 
       // pero si quieres mapear source maps, configúralo:
       "skipFiles": [

@@ -1,0 +1,12 @@
+services:
+  run:
+    image: ${MY_IMAGE_NAME:-changeme-name-debug-run} 
+    build:
+      context: ../../../../app                     # Ajusta al path correcto
+      dockerfile: ./execute/docker/run/Dockerfile
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    volumes:
+      - ../../../../app:/usr/src/app
+      - /usr/src/app/node_modules

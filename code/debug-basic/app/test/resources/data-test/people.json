@@ -1,0 +1,34 @@
+{
+  "validate1": {
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "name": "Ana Lopez",
+    "age": 27,
+    "isActive": true,
+    "birthDate": "1995-08-20T00:00:00.000Z",
+    "createdAt": "2023-05-01T12:00:00.000Z",
+    "updatedAt": "2023-05-01T12:00:00.000Z",
+    "hobbies": [
+      "pintura",
+      "running"
+    ],
+    "address": {
+      "street": "Main Street",
+      "number": 123,
+      "city": "Santiago",
+      "createdAt": "2023-05-01T12:00:00.000Z"
+    },
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": 2,
+        "startDate": "2023-05-01T12:00:00.000Z"
+      }
+    ],
+    "email": "ana.lopez@example.com",
+    "metadata": {
+      "pais": "Chile",
+      "telefono": "987654321",
+      "experienciaAnios": 3
+    }
+  }
+}
