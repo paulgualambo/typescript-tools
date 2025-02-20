@@ -1,4 +1,12 @@
-// src/index.ts
-import { sumar } from "./module/service";
+import { Proceso } from "./module/proceso";
 
-sumar(10,12)
+
+export function main(input: any): void {
+    try {
+        const proc = new Proceso<any>();
+        proc.process(input);
+        console.log("Dato:", proc.getData());
+    } catch (error) {
+        console.error("Error al ejecutar los casos:", error);
+    }
+}

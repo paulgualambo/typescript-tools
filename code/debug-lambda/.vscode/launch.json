@@ -20,19 +20,6 @@
     ,
     {
       "type": "node",
-      "request": "launch",
-      "name": "Debug Jest Tests (app)",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "test:debug"
-      ],
-      "cwd": "${workspaceFolder}/app",
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-    {
-      "type": "node",
       "request": "attach",
       "name": "Attach to Docker (TS)",
       "address": "localhost",

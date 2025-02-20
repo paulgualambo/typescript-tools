@@ -7,7 +7,7 @@
         "command": "${workspaceFolder}/app/node_modules/.bin/tsc",
         "args": [
           "-p",
-          "app/debug/tsconfig.json"  // Ruta relativa al workspace root
+          "app/execute/tsconfig.json"  // Ruta relativa al workspace root
         ],
         "problemMatcher": ["$tsc"],
         "group": "build",

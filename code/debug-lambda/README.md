@@ -17,18 +17,17 @@ Unit Test command
 Unit Test debug
      aplicacion jest
 
-Docker ejecucion run script
+Docker ejecucion script
     cd app
-    MY_IMAGE_NAME=debug-basic-run docker compose -p debug-basic -f ./execute/docker/run/docker-compose.yml up --build
+    MY_IMAGE_NAME=debug-lambda-run docker compose -p debug-lambda -f ./execute/docker/run/docker-compose.yml up --build
 
 Debugging Docker ejecucion script
-    MY_IMAGE_NAME=debug-basic-debug docker compose -p debug-basic -f ./execute/docker/debug/docker-compose.yml up --build
+    docker compose -p basic-debug -f ./execute/docker/debug/docker-compose.yml up --build -p basic-debug
     se activa el debug vscode
     se invoca a 
     http://localhost:3000/
 
 Unit Test docker
-
 Unit Test docker debug
 
 ## problemas para nvm

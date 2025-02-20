@@ -10,7 +10,6 @@ export const loggerMiddleware = (): MiddlewareObj => {
     },
     onError: async (request) => {
       console.error("Error:", request.error);
-      // Dejar que Middy continúe manejando el error
     }
   };
 };
