@@ -30,6 +30,6 @@
     "@middy/core": "^4.0.0",
     "@middy/http-json-body-parser": "^6.0.0",
     "@middy/util": "^4.0.0",
-    "@middy/validator": "^6.0.0"
+    "@middy/validator": "^6.1.3"
   }
 }
