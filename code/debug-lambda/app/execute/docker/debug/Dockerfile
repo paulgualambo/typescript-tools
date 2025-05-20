@@ -1,5 +1,5 @@
 # Fase de build para compilar el TypeScript
-FROM node:20.18.3-alpine3.21 AS builder
+FROM node:20.19.2-alpine3.21 AS builder
 ENV NODE_ENV=development
 WORKDIR /app
 COPY package*.json ./
@@ -7,7 +7,7 @@ RUN npm install
 COPY . .
 
 # Fase final para ejecutar
-FROM node:20.18.3-alpine3.21
+FROM node:20.19.2-alpine3.21
 ENV NODE_ENV=development
 WORKDIR /usr/src/app
 
